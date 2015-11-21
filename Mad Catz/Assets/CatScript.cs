@@ -5,11 +5,11 @@ public class CatScript : MonoBehaviour {
 
     SoundLevel SoundLevel;
 
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision collision)
     {
-        if (other.tag!="DoesNotAngerCat")
+        if (collision.rigidbody != null&&collision.rigidbody.tag!="DoesNotAngerCat")
         {
-            SoundLevel.Increase(2000f);
+            SoundLevel.Change(0.4f);
         }
     }
 

@@ -16,11 +16,16 @@ public class SoundLevel : MonoBehaviour {
     
     float soundLevel = 0.0f;
 
-    public void Increase(float amount)
+    public void Change(float amount)
     {
+        if (gameOver) return;
         soundLevel += amount;
         SoundLevelSlider.value = soundLevel;
 
+        if (soundLevel < 0)
+        {
+            soundLevel = 0;
+        }
         if (soundLevel >= 1.0f)
         {
             //game over after like 2 seconds
@@ -29,15 +34,15 @@ public class SoundLevel : MonoBehaviour {
             soundLevel = 1;
         }
 
-        Noise.grainIntensityMax = soundLevel * soundLevel * 0.9f;
-        Noise.scratchIntensityMax = soundLevel * 0.6f;
-        Trippy.intensity = soundLevel * 0.7f;
+        Noise.grainIntensityMax = soundLevel * soundLevel * 0.7f;
+        Noise.scratchIntensityMax = soundLevel * 0.7f;
+        Trippy.intensity = soundLevel * 0.3f;
     }
 
     IEnumerator GameEnd()
     {
         //TODO: do some ending effects: cats going insane, screams, post effects...
-        DateTime gameOverAnimationEndTime = DateTime.Now;
+        gameOverAnimationEndTime = DateTime.Now;
         yield return new WaitForSeconds(2);
         MANAGER.changeScene("gameover");
     }
@@ -56,8 +61,14 @@ public class SoundLevel : MonoBehaviour {
 	    if (gameOver)
         {
             //animate game over
-            long delta = gameOverAnimationEndTime.ToBinary() - DateTime.Now.ToBinary();
-            Debug.Log(delta);
+            TimeSpan delta = DateTime.Now - gameOverAnimationEndTime;
+            float percent = ((float)delta.TotalMilliseconds / 2000f);
+            Trippy.chromaticAberration = percent * 300f;
+            Debug.Log(percent);
+        }
+        else
+        {
+            Change(-0.0005f);
         }
 	}
 }
