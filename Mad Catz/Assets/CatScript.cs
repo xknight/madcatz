@@ -9,7 +9,7 @@ public class CatScript : MonoBehaviour {
     {
         if (other.tag!="DoesNotAngerCat")
         {
-            SoundLevel.Increase();
+            SoundLevel.Increase(2000f);
         }
     }
 
