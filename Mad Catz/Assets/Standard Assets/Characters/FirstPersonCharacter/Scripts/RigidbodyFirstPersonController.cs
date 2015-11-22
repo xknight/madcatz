@@ -130,7 +130,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             if (CrossPlatformInputManager.GetButtonDown("Jump") && !m_Jump)
             {
-                m_Jump = true;
+                //jump disabled
+                m_Jump = false;//true;
             }
         }
 

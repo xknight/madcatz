@@ -1,0 +1,218 @@
+fileFormatVersion: 2
+guid: 4fe4af312230cdf41a0d5dff73ec7510
+timeCreated: 1448183454
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Bone015
+    100002: Bone019
+    100004: Cat
+    100006: //RootNode
+    100008: Head
+    100010: Head_tip
+    100012: Hip
+    100014: L_Ear
+    100016: L_Ear01
+    100018: LBack_leg
+    100020: LFront_leg
+    100022: Neck
+    100024: R_Ear
+    100026: R_Ear01
+    100028: RBack_leg
+    100030: RBack_leg01
+    100032: RBack_leg01(mirrored)
+    100034: RBack_leg02
+    100036: RBack_leg02(mirrored)
+    100038: RFront_leg
+    100040: RFront_leg01
+    100042: RFront_leg01(mirrored)
+    100044: RFront_leg02
+    100046: RFront_leg02(mirrored)
+    100048: Spine01
+    100050: Spine02
+    100052: Tail
+    100054: tail02
+    100056: Tail03
+    400000: Bone015
+    400002: Bone019
+    400004: Cat
+    400006: //RootNode
+    400008: Head
+    400010: Head_tip
+    400012: Hip
+    400014: L_Ear
+    400016: L_Ear01
+    400018: LBack_leg
+    400020: LFront_leg
+    400022: Neck
+    400024: R_Ear
+    400026: R_Ear01
+    400028: RBack_leg
+    400030: RBack_leg01
+    400032: RBack_leg01(mirrored)
+    400034: RBack_leg02
+    400036: RBack_leg02(mirrored)
+    400038: RFront_leg
+    400040: RFront_leg01
+    400042: RFront_leg01(mirrored)
+    400044: RFront_leg02
+    400046: RFront_leg02(mirrored)
+    400048: Spine01
+    400050: Spine02
+    400052: Tail
+    400054: tail02
+    400056: Tail03
+    4300000: Cat
+    7400000: Take 001
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Cat
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 2
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 100
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cat
+        weight: 1
+      - path: Hip
+        weight: 1
+      - path: Hip/LBack_leg
+        weight: 1
+      - path: Hip/LBack_leg/RBack_leg01(mirrored)
+        weight: 1
+      - path: Hip/LBack_leg/RBack_leg01(mirrored)/RBack_leg02(mirrored)
+        weight: 1
+      - path: Hip/RBack_leg
+        weight: 1
+      - path: Hip/RBack_leg/RBack_leg01
+        weight: 1
+      - path: Hip/RBack_leg/RBack_leg01/RBack_leg02
+        weight: 1
+      - path: Hip/Spine01
+        weight: 1
+      - path: Hip/Spine01/Spine02
+        weight: 1
+      - path: Hip/Spine01/Spine02/Bone019
+        weight: 1
+      - path: Hip/Spine01/Spine02/LFront_leg
+        weight: 1
+      - path: Hip/Spine01/Spine02/LFront_leg/RFront_leg01(mirrored)
+        weight: 1
+      - path: Hip/Spine01/Spine02/LFront_leg/RFront_leg01(mirrored)/RFront_leg02(mirrored)
+        weight: 1
+      - path: Hip/Spine01/Spine02/Neck
+        weight: 1
+      - path: Hip/Spine01/Spine02/Neck/Head
+        weight: 1
+      - path: Hip/Spine01/Spine02/Neck/Head/Head_tip
+        weight: 1
+      - path: Hip/Spine01/Spine02/Neck/Head/L_Ear
+        weight: 1
+      - path: Hip/Spine01/Spine02/Neck/Head/L_Ear/L_Ear01
+        weight: 1
+      - path: Hip/Spine01/Spine02/Neck/Head/R_Ear
+        weight: 1
+      - path: Hip/Spine01/Spine02/Neck/Head/R_Ear/R_Ear01
+        weight: 1
+      - path: Hip/Spine01/Spine02/RFront_leg
+        weight: 1
+      - path: Hip/Spine01/Spine02/RFront_leg/RFront_leg01
+        weight: 1
+      - path: Hip/Spine01/Spine02/RFront_leg/RFront_leg01/RFront_leg02
+        weight: 1
+      - path: Hip/Tail
+        weight: 1
+      - path: Hip/Tail/tail02
+        weight: 1
+      - path: Hip/Tail/tail02/Tail03
+        weight: 1
+      - path: Hip/Tail/tail02/Tail03/Bone015
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

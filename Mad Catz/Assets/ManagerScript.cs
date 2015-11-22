@@ -3,6 +3,8 @@ using System.Collections;
 
 public class ManagerScript : MonoBehaviour {
 
+    public bool cursorVisible = true;
+
     public void changeScene(string index) {
         Application.LoadLevel(index);
     }
@@ -14,8 +16,8 @@ public class ManagerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	    
-	}
+        Cursor.visible = cursorVisible;
+    }
 	
 	// Update is called once per frame
 	void Update () {

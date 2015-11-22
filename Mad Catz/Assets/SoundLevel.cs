@@ -10,6 +10,11 @@ public class SoundLevel : MonoBehaviour {
     GameObject MainCamera;
     NoiseAndScratches Noise;
     VignetteAndChromaticAberration Trippy;
+    GameObject granny;
+    GameObject door;
+    GameObject player;
+    GameObject GrannyCam;
+    GameObject GrannySpot;
 
     DateTime gameOverAnimationEndTime;
     bool gameOver;
@@ -34,16 +39,22 @@ public class SoundLevel : MonoBehaviour {
             soundLevel = 1;
         }
 
-        Noise.grainIntensityMax = soundLevel * soundLevel * 0.7f;
-        Noise.scratchIntensityMax = soundLevel * 0.7f;
-        Trippy.intensity = soundLevel * 0.3f;
+        Noise.grainIntensityMax = soundLevel * soundLevel * 0.3f;
+        Noise.scratchIntensityMax = soundLevel * 0.4f;
+        Trippy.intensity = soundLevel * 0.2f;
     }
 
     IEnumerator GameEnd()
     {
-        //TODO: do some ending effects: cats going insane, screams, post effects...
+        //GRANNY SLAM
         gameOverAnimationEndTime = DateTime.Now;
         yield return new WaitForSeconds(2);
+        granny.GetComponent<Animation>().Play();
+        Destroy(door);
+        GrannySpot.GetComponent<Light>().enabled=true;
+        MainCamera.GetComponent<Camera>().enabled = false;
+        GrannyCam.GetComponent<Camera>().enabled = true;
+        yield return new WaitForSeconds(4);
         MANAGER.changeScene("gameover");
     }
 
@@ -52,8 +63,13 @@ public class SoundLevel : MonoBehaviour {
         SoundLevelSlider = GameObject.Find("SoundLevelSlider").GetComponent<Slider>();
         MANAGER = GameObject.Find("_Manager").GetComponent<ManagerScript>();
         MainCamera = GameObject.Find("MainCamera");
+        GrannyCam = GameObject.Find("GRANNYCAM");
         Noise = MainCamera.GetComponent<NoiseAndScratches>();
         Trippy = MainCamera.GetComponent<VignetteAndChromaticAberration>();
+        granny = GameObject.Find("GRANNY");
+        door = GameObject.Find("GRANNYDOOR");
+        player = GameObject.Find("PLAYER");
+        GrannySpot = GameObject.Find("GRANNYSPOT");
     }
 	
 	// Update is called once per frame
@@ -62,13 +78,12 @@ public class SoundLevel : MonoBehaviour {
         {
             //animate game over
             TimeSpan delta = DateTime.Now - gameOverAnimationEndTime;
-            float percent = ((float)delta.TotalMilliseconds / 2000f);
-            Trippy.chromaticAberration = percent * 300f;
-            Debug.Log(percent);
+            float percent = ((float)delta.TotalMilliseconds / 6000f);
+            Trippy.chromaticAberration = percent * 30f;
         }
         else
         {
-            Change(-0.0005f);
+            Change(-0.0002f);
         }
 	}
 }
